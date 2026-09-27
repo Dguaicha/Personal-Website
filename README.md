@@ -1,7 +1,3 @@
-<<<<<<< Updated upstream
-# About Myself
-
-=======
 # Personal portfolio
 
 A professional, academic-first portfolio built with Flask and Bootstrap. There is no database: all content is simple and local.
@@ -28,4 +24,3 @@ Open `http://127.0.0.1:5000`.
 | Colours and small visual refinements | `static/css/site.css` |
 
 When you add a document or image, put it in the relevant folder and update its `file` value in `content/portfolio.py`. Do not store sensitive documents in a public website repository.
->>>>>>> Stashed changes

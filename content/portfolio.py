@@ -68,7 +68,6 @@ PORTFOLIO = {
             "institution": "King's College London",
             "qualification": "King's International Foundation Programme for STEM and Natural Sciences",
             "dates": "29 September 2025 – 5 June 2026",
-<<<<<<< Updated upstream
             "detail": "Foundation Certificate modules completed across computing, mathematics, academic communication, and scientific context.",
             "subject_groups": [
                 {
@@ -87,16 +86,12 @@ PORTFOLIO = {
                     ],
                 },
             ],
-=======
-            "detail": "Modules: 0CS0CSE Computer Science; 0CCY1016 Mathematics for Natural Sciences; 0LEC30EX Academic Expression and Critical Thinking; 0LEC30SS Science and Society.",
->>>>>>> Stashed changes
             "logo": "assets/images/KingsCollegeLondonLogo.png",
         },
         {
             "institution": "Dulwich College Singapore — IB",
             "qualification": "International Baccalaureate Diploma Programme",
             "dates": "DUMMY: YYYY – YYYY",
-<<<<<<< Updated upstream
             "detail": "International Baccalaureate Diploma Programme subject structure. DUMMY: Add your total score, grades, achievements, or activities.",
             "subject_groups": [
                 {
@@ -116,16 +111,12 @@ PORTFOLIO = {
                     ],
                 },
             ],
-=======
-            "detail": "Higher Level (HL): Mathematics: Analysis and Approaches; Physics; Economics. Standard Level (SL): Computer Science; English; Spanish A: Literature (self-taught). DUMMY: Add your total score, grades, achievements, or activities.",
->>>>>>> Stashed changes
             "logo": "assets/images/DulwichCollegeSingapore.png",
         },
         {
             "institution": "The British School of Quito (BSQ)",
             "qualification": "International General Certificate of Secondary Education (IGCSE)",
             "dates": "DUMMY: YYYY – YYYY",
-<<<<<<< Updated upstream
             "detail": "Cambridge IGCSE subjects completed across humanities, languages, mathematics, and the sciences.",
             "subject_groups": [
                 {
@@ -143,9 +134,6 @@ PORTFOLIO = {
                     ],
                 },
             ],
-=======
-            "detail": "Subjects: 0413 Physical Education; 0460 Geography; 0475 Literature in English; 0488 Literature (Spanish); 0500 First Language English; 0580 Mathematics; 0610 Biology; 0620 Chemistry; 0625 Physics.",
->>>>>>> Stashed changes
             "logo": "assets/images/BSQ.png",
         },
     ],

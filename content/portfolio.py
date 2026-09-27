@@ -5,15 +5,22 @@ PORTFOLIO = {
     "short_name": "David Guaicha",
     "email": "dguaichaalejandro@gmail.com",
     "phone": "+44 7466 861442",
-    "location_line": "Quito, Ecuador · Singapore · London, UK | First-year student (19) | Computer Science & Management",
+    "location_line": "Quito, Ecuador · Singapore · London, UK | First-year student | Computer Science & Management",
     "headline": "BSc (Hons) Computer Science with Management",
     "intro": "From Quito to London, I am building my academic and professional path in technology through computer science, management, and the experiences shaping where I go next.",
-    "about": "Write a concise introduction here: who you are, what you are studying, and the kind of problems or opportunities that motivate you.",
-    "vision": "Add your long-term vision here. A strong version is specific about the impact you hope to make, while remaining authentic to you.",
+    "about_paragraphs": [
+        "My roots are in Ecuador, where my family shaped much of the way I see the world. My parents, particularly through the experiences and values my father developed after leaving his hometown and building a life in the city, brought home principles of humility, faith, discipline, and service. Growing up, these were not simply ideas but things we practiced. My family regularly volunteered, donated, collaborated with communities, and supported people in need—from children without families to the elderly and those living in poverty. Being involved in that work from an early age left me with a lasting conviction: whatever I build, learn, or become should ultimately have a purpose beyond myself.",
+        "That conviction is at the centre of my ambition. I have always been drawn to science, mathematics, engineering, and the idea of solving problems that matter, and I eventually found computer science during the IB in Singapore. Since then, I have committed myself to learning it deeply—not because of money or prestige, but because I genuinely enjoy understanding how things work and how technology can be used to create a better future. My path has not been entirely straightforward; foundation studies gave me additional time to strengthen my mathematics and develop independently through courses, practice, and self-directed learning. Rather than seeing that as a setback, I chose to use it as an opportunity to grow. I am still learning, still improving, and still building toward the person I want to become: someone who combines technical ability with integrity, continual self-improvement, and a genuine desire to use what I know to help others and, in some small way, prevent problems before they become disasters.",
+    ],
+    "vision_paragraphs": [
+        "My vision is not simply to become successful, but to become someone worthy of the opportunities I am given. My faith is the foundation from which I try to live—with humility, discipline, gratitude, and a responsibility to use what I have for something greater than myself. I do not see myself as exceptionally gifted, nor do I believe I need to be. I believe consistency, curiosity, resilience, and a willingness to keep learning can take me much further than talent alone.",
+        "I want to build a life in which technology and knowledge are tools for meaningful impact. Whether through research, engineering, entrepreneurship, or work I have not yet discovered, I hope to contribute to solutions that make people's lives safer, better, and more hopeful. I want to keep developing intellectually without losing the human qualities that matter more: integrity, compassion, humility, and the willingness to serve.",
+        "Beyond a career, I hope to build a life I can genuinely be proud of—a life filled with purpose, a loving family, meaningful relationships, and opportunities to give back. I want to look back and know that I did not measure my life by how much I accumulated, but by how much I learned, how much I grew, and how much good I was able to leave behind.",
+    ],
     "profile_image": "assets/images/ProfilePicture.jpeg",
     "education": [
         {
-            "institution": "King's College London",
+            "institution": "King's College London — Undergraduate Degree",
             "qualification": "BSc (Hons) Computer Science with Management and a Year in Industry",
             "dates": "2026/27 · First year",
             "detail": "Faculty of Natural, Mathematical and Engineering Sciences — Department of Informatics and KBS Joint Honours.",
@@ -65,7 +72,7 @@ PORTFOLIO = {
             "logo": "assets/images/KingsCollegeLondonLogo.png",
         },
         {
-            "institution": "King's College London",
+            "institution": "King's College London — KIF",
             "qualification": "King's International Foundation Programme for STEM and Natural Sciences",
             "dates": "29 September 2025 – 5 June 2026",
             "detail": "Foundation Certificate modules completed across computing, mathematics, academic communication, and scientific context.",
@@ -91,7 +98,7 @@ PORTFOLIO = {
         {
             "institution": "Dulwich College Singapore — IB",
             "qualification": "International Baccalaureate Diploma Programme",
-            "dates": "DUMMY: YYYY – YYYY",
+            "dates": "22 August 2023 – 8 August 2025",
             "detail": "International Baccalaureate Diploma Programme subject structure. DUMMY: Add your total score, grades, achievements, or activities.",
             "subject_groups": [
                 {
@@ -116,7 +123,7 @@ PORTFOLIO = {
         {
             "institution": "The British School of Quito (BSQ)",
             "qualification": "International General Certificate of Secondary Education (IGCSE)",
-            "dates": "DUMMY: YYYY – YYYY",
+            "dates": "2021–2023 · Years 10–11",
             "detail": "Cambridge IGCSE subjects completed across humanities, languages, mathematics, and the sciences.",
             "subject_groups": [
                 {

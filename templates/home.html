@@ -56,11 +56,39 @@
       <div class="row justify-content-center">
         <div class="col-lg-9">
           <h2 class="fw-bold mb-3">Qualifications and achievements</h2>
-          <div class="card border-0 shadow-sm">
+          {% for item in portfolio.education %}<article class="card border-0 shadow-sm mb-4">
             <div class="card-body p-4">
-              <p class="mb-0 text-secondary">TODO</p>
+              <p class="text-primary fw-semibold mb-1">{{ item.dates }}</p>
+              <h3 class="h4 fw-bold mb-1">{{ item.institution }}</h3>
+              <p class="fw-semibold mb-2">{{ item.qualification }}</p>
+              <p class="text-secondary">{{ item.detail }}</p>
+              {% for group in item.subject_groups %}<div class="mb-3">
+                <p class="fw-semibold mb-2">{{ group.label }}</p>
+                <div class="d-flex flex-wrap gap-2">{% for subject in group.items %}<span
+                    class="badge text-bg-light border text-dark p-2">{% if subject.code %}<span class="text-primary">{{
+                      subject.code }}</span> {% endif %}{{ subject.name }}</span>{% endfor %}</div>
+              </div>{% endfor %}
+              {% if item.modules %}<div class="table-responsive">
+                <p class="fw-semibold mb-2">{{ item.module_year }}</p>
+                <table class="table table-sm align-middle mb-0">
+                  <thead>
+                    <tr>
+                      <th>Module</th>
+                      <th>Title</th>
+                      <th>Level</th>
+                      <th>Credits</th>
+                    </tr>
+                  </thead>
+                  <tbody>{% for module in item.modules %}<tr>
+                      <td class="text-primary fw-semibold">{{ module.code }}</td>
+                      <td>{{ module.title }}</td>
+                      <td>{{ module.level }}</td>
+                      <td>{{ module.credits }}</td>
+                    </tr>{% endfor %}</tbody>
+                </table>
+              </div>{% endif %}
             </div>
-          </div>
+          </article>{% endfor %}
         </div>
       </div>
     </section>

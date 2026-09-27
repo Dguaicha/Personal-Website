@@ -1,0 +1,230 @@
+"""Edit this file to update the public information on the portfolio."""
+
+PORTFOLIO = {
+    "name": "David Alejandro Guaicha Villagomez",
+    "short_name": "David Guaicha",
+    "email": "dguaichaalejandro@gmail.com",
+    "phone": "+44 7466 861442",
+    "location_line": "Quito, Ecuador · Singapore · London, UK | First-year student (19) | Computer Science & Management",
+    "headline": "BSc (Hons) Computer Science with Management",
+    "intro": "From Quito to London, I am building my academic and professional path in technology through computer science, management, and the experiences shaping where I go next.",
+    "about": "Write a concise introduction here: who you are, what you are studying, and the kind of problems or opportunities that motivate you.",
+    "vision": "Add your long-term vision here. A strong version is specific about the impact you hope to make, while remaining authentic to you.",
+    "profile_image": "assets/images/ProfilePicture.jpeg",
+    "education": [
+        {
+            "institution": "King's College London",
+            "qualification": "BSc (Hons) Computer Science with Management and a Year in Industry",
+            "dates": "2026/27 · First year",
+            "detail": "Faculty of Natural, Mathematical and Engineering Sciences — Department of Informatics and KBS Joint Honours.",
+            "module_year": "Year 1 modules",
+            "modules": [
+                {
+                    "code": "4CCS1CS1",
+                    "title": "Computer Systems",
+                    "level": "4",
+                    "credits": "15",
+                },
+                {
+                    "code": "4CCS1FC1",
+                    "title": "Foundations of Computing 1",
+                    "level": "4",
+                    "credits": "15",
+                },
+                {
+                    "code": "4QQMB104",
+                    "title": "Fundamentals of Finance",
+                    "level": "4",
+                    "credits": "15",
+                },
+                {
+                    "code": "4CCS1DBS",
+                    "title": "Database Systems",
+                    "level": "4",
+                    "credits": "15",
+                },
+                {
+                    "code": "4CCS1DST",
+                    "title": "Data Structures",
+                    "level": "4",
+                    "credits": "15",
+                },
+                {
+                    "code": "4QQMB103",
+                    "title": "Principles of Marketing",
+                    "level": "4",
+                    "credits": "15",
+                },
+                {
+                    "code": "4CCS1PPA",
+                    "title": "Programming Practice and Applications",
+                    "level": "4",
+                    "credits": "30",
+                },
+            ],
+            "logo": "assets/images/KingsCollegeLondonLogo.png",
+        },
+        {
+            "institution": "King's College London",
+            "qualification": "King's International Foundation Programme for STEM and Natural Sciences",
+            "dates": "29 September 2025 – 5 June 2026",
+            "detail": "Foundation Certificate modules completed across computing, mathematics, academic communication, and scientific context.",
+            "subject_groups": [
+                {
+                    "label": "Foundation modules",
+                    "items": [
+                        {"code": "0CS0CSE", "name": "Computer Science"},
+                        {
+                            "code": "0CCY1016",
+                            "name": "Mathematics for Natural Sciences",
+                        },
+                        {
+                            "code": "0LEC30EX",
+                            "name": "Academic Expression and Critical Thinking",
+                        },
+                        {"code": "0LEC30SS", "name": "Science and Society"},
+                    ],
+                },
+            ],
+            "logo": "assets/images/KingsCollegeLondonLogo.png",
+        },
+        {
+            "institution": "Dulwich College Singapore — IB",
+            "qualification": "International Baccalaureate Diploma Programme",
+            "dates": "DUMMY: YYYY – YYYY",
+            "detail": "International Baccalaureate Diploma Programme subject structure. DUMMY: Add your total score, grades, achievements, or activities.",
+            "subject_groups": [
+                {
+                    "label": "Higher Level (HL)",
+                    "items": [
+                        {"name": "Mathematics: Analysis and Approaches"},
+                        {"name": "Physics"},
+                        {"name": "Economics"},
+                    ],
+                },
+                {
+                    "label": "Standard Level (SL)",
+                    "items": [
+                        {"name": "Computer Science"},
+                        {"name": "English"},
+                        {"name": "Spanish A: Literature (self-taught)"},
+                    ],
+                },
+            ],
+            "logo": "assets/images/DulwichCollegeSingapore.png",
+        },
+        {
+            "institution": "The British School of Quito (BSQ)",
+            "qualification": "International General Certificate of Secondary Education (IGCSE)",
+            "dates": "DUMMY: YYYY – YYYY",
+            "detail": "Cambridge IGCSE subjects completed across humanities, languages, mathematics, and the sciences.",
+            "subject_groups": [
+                {
+                    "label": "IGCSE subjects",
+                    "items": [
+                        {"code": "0413", "name": "Physical Education"},
+                        {"code": "0460", "name": "Geography"},
+                        {"code": "0475", "name": "Literature in English"},
+                        {"code": "0488", "name": "Literature (Spanish)"},
+                        {"code": "0500", "name": "First Language English"},
+                        {"code": "0580", "name": "Mathematics"},
+                        {"code": "0610", "name": "Biology"},
+                        {"code": "0620", "name": "Chemistry"},
+                        {"code": "0625", "name": "Physics"},
+                    ],
+                },
+            ],
+            "logo": "assets/images/BSQ.png",
+        },
+    ],
+    "interests": ["Computer science", "Technology", "Problem solving"],
+    "skills": ["Python", "Web development", "Communication", "Research"],
+    "projects": [
+        {
+            "title": "Portfolio website",
+            "description": "A growing record of my academic work, projects, and achievements.",
+            "tags": ["Flask", "Bootstrap", "HTML/CSS"],
+            "link": None,
+        },
+        {
+            "title": "Next project",
+            "description": "Replace this placeholder with a project, contribution, competition, or independent study.",
+            "tags": ["Coming soon"],
+            "link": None,
+        },
+    ],
+    "certificates": [
+        {
+            "title": "CS50x: Introduction to Computer Science",
+            "issuer": "Harvard University",
+            "date": "DUMMY: Add completion date",
+            "description": "Foundational computer science study covering programming, algorithms, data structures, and web development.",
+            "file": "assets/documents/certificates/CS50x_certificate.pdf",
+        },
+        {
+            "title": "Python Programming",
+            "issuer": "CETEC — Centro Tecnológico de Entrenamiento y Capacitación",
+            "date": "September 12, 2025 · 20 hours",
+            "description": "Practical Python training covering data structures, procedures and functions, packages and modules, libraries, object-oriented programming, inheritance, and AI tools.",
+            "file": "assets/documents/certificates/CERTIFICADO CETEC PROGRAMACION PYTHON-signed.pdf",
+        },
+        {
+            "title": "Web Programming: Python, Java and Fundamentals",
+            "issuer": "CETEC — Centro Tecnológico de Entrenamiento y Capacitación",
+            "date": "July 7–28, 2025 · In-person course",
+            "description": "A practical web programming course covering Python, Java, and core programming fundamentals through in-person study.",
+            "file": "assets/documents/certificates/CETEC CERTIFICADO-signed.pdf",
+        },
+        {
+            "title": "Artificial Intelligence",
+            "issuer": "CETEC — Centro Tecnológico de Entrenamiento y Capacitación",
+            "date": "September 12, 2025 · 10 hours",
+            "description": "An introduction to artificial intelligence covering core principles, types of AI, human–AI interaction, practical applications, AI sectors, and semantics.",
+            "file": "assets/documents/certificates/CERTIFICADO CETEC PROGRAMACION INTELIGENCIA ARTIFICIAL-signed (1).pdf",
+        },
+        {
+            "title": "Duke of Edinburgh's Award — Bronze",
+            "issuer": "The Duke of Edinburgh's Award",
+            "date": "DUMMY: Add completion date or academic year",
+            "description": "A structured personal development award combining volunteering, physical activity, skills development, and an expedition.",
+            "file": "assets/documents/certificates/2024 US Bronze certificate - VISUAL 1.pdf",
+        },
+        {
+            "title": "Student Council Service",
+            "issuer": "DUMMY: Add school or organisation name",
+            "date": "DUMMY: Add date or academic year",
+            "description": "Ongoing student leadership and community service, contributing to school life and initiatives that support others.",
+            "file": "assets/documents/certificates/studentcouncil.jpg",
+        },
+        {
+            "title": "SafeTALK Suicide Alertness Training",
+            "issuer": "DUMMY: Add training provider or organisation",
+            "date": "DUMMY: Add completion date",
+            "description": "Training in recognising signs of suicide risk, responding with care, and connecting people with appropriate support.",
+            "file": "assets/documents/certificates/safetalk.jpg",
+        },
+        {
+            "title": "Environmental Service: Galápagos Beach Clean-up",
+            "issuer": "DUMMY: Add organising organisation or community partner",
+            "date": "DUMMY: Add date or academic year",
+            "description": "Community service supporting environmental clean-up efforts and care for the coastal environment in the Galápagos.",
+            "file": "assets/documents/certificates/servicebeachcleaning.jpg",
+        },
+        {
+            "title": "Determination to Improve",
+            "issuer": "DUMMY: Add issuing school or organisation",
+            "date": "DUMMY: Add date or academic year",
+            "description": "Recognition of sustained effort, resilience, and a commitment to personal improvement.",
+            "file": "assets/documents/certificates/determinationtoimprove.jpg",
+        },
+    ],
+    "documents": [
+        {"title": "Curriculum vitae", "file": None},
+        {"title": "Academic transcript", "file": None},
+        {"title": "References and letters of recommendation", "file": None},
+    ],
+    "links": {
+        "linkedin": "https://www.linkedin.com/in/david-villagómez-439066305",
+        "github": "https://github.com/Dguaicha",
+    },
+}

@@ -1,5 +1,6 @@
 from flask import Flask, abort, jsonify, render_template
 from database import load_jobs_from_db, load_job_from_db
+from content.portfolio import PORTFOLIO
 
 app = Flask(__name__)
 
@@ -10,6 +11,7 @@ def hello_world():
     return render_template(
         "home.html",
         jobs=jobs,
+        portfolio=PORTFOLIO,
     )
 
 

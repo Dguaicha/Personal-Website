@@ -1,5 +1,1 @@
 Flask
-gunicorn
-python-dotenv
-sqlalchemy
-pymysql

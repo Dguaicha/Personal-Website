@@ -2,55 +2,60 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  {% include 'bootstrap.html' %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of {{ portfolio.name }}">
+  <title>{{ portfolio.name }} | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/site.css') }}">
 </head>
 
-<body class="bg-light text-dark">
-  {% include 'nav.html' %}
-
-  <main id="top">
-    <section class="bg-white border-bottom">
-      <div class="container py-5">
-        <div class="row align-items-center g-4">
-          <div class="col-lg-7 order-lg-2">
-            <img class="img-fluid rounded-4 shadow-sm w-100" src="{{ url_for('static', filename='banner.png') }}"
-              alt="Portfolio banner" />
-          </div>
-          <div class="col-lg-5 order-lg-1">
-            <p class="text-primary fw-semibold text-uppercase mb-2">
-              Personal portfolio
-            </p>
-            <h1 class="display-5 fw-bold">David Alejandro Guaicha</h1>
-            <p class="lead text-secondary mt-3">
-              Welcome to my personal portfolio. Here you can learn about my
-              background, skills, and professional journey.
-            </p>
-            <a class="btn btn-primary btn-lg mt-2" href="#contact">Get in touch</a>
-          </div>
-        </div>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top site-nav">
+    <div class="container">
+      <a class="navbar-brand" href="#top">{{ portfolio.short_name }}</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"><span
+          class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navigation">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          {% if portfolio.links.linkedin %}<li class="nav-item"><a class="nav-social"
+              href="{{ portfolio.links.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn profile"
+              title="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a></li>{% endif %}
+          {% if portfolio.links.github %}<li class="nav-item"><a class="nav-social" href="{{ portfolio.links.github }}"
+              target="_blank" rel="noopener" aria-label="GitHub profile" title="GitHub"><i class="bi bi-github"
+                aria-hidden="true"></i></a></li>{% endif %}
+          <li class="nav-item"><a class="btn btn-sm btn-primary ms-lg-3" href="#contact">Contact</a></li>
+        </ul>
       </div>
-    </section>
-
-    <section class="container py-5" id="about">
-      <div class="row justify-content-center">
-        <div class="col-lg-9">
-          <p class="text-primary fw-semibold text-uppercase mb-2">
-            Education &amp; background
-          </p>
-          <h2 class="fw-bold mb-3">About me</h2>
-          <div class="card border-0 shadow-sm">
-            <div class="card-body p-4">
-              <p class="mb-0 text-secondary">
-                {%for job in jobs%} {% include 'jobitem.html'%} {% endfor %}
-              </p>
+    </div>
+  </nav>
+  <main id="top">
+    <section class="hero-section">
+      <div class="container py-5 py-lg-6">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7 order-lg-2">{% if portfolio.profile_image %}<img class="profile-photo"
+              src="{{ url_for('static', filename=portfolio.profile_image) }}" alt="Portrait of {{ portfolio.name }}">{%
+            else %}<div class="profile-placeholder" role="img" aria-label="Profile photo placeholder"><span>{{
+                portfolio.short_name.split()[0][0] }}{{ portfolio.short_name.split()[-1][0] }}</span><small>Add your
+                profile photo</small></div>{% endif %}</div>
+          <div class="col-lg-5 order-lg-1">
+            <p class="eyebrow">{{ portfolio.location_line }}</p>
+            <h1>{{ portfolio.name }}</h1>
+            <p class="hero-headline">{{ portfolio.headline }}</p>
+            <p class="hero-copy">{{ portfolio.intro }}</p>
+            <div class="d-flex flex-wrap gap-2 mt-4"><a class="btn btn-primary px-4" href="#education">Explore my
+                background</a><a class="btn btn-outline-primary px-4" href="mailto:{{ portfolio.email }}">Email me</a>
             </div>
           </div>
         </div>
       </div>
     </section>
+<<<<<<< Updated upstream
 
     <section class="container pb-5" id="qualifications">
       <div class="row justify-content-center">
@@ -87,15 +92,138 @@
                     </tr>{% endfor %}</tbody>
                 </table>
               </div>{% endif %}
+=======
+    <section class="section" id="about">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-7">
+            <p class="eyebrow">Background</p>
+            <h2>About me</h2>
+            <p class="section-copy">{{ portfolio.about }}</p>
+          </div>
+          <div class="col-lg-5">
+            <div class="vision-card">
+              <p class="eyebrow">Looking ahead</p>
+              <h3>My vision</h3>
+              <p class="mb-0">{{ portfolio.vision }}</p>
+>>>>>>> Stashed changes
             </div>
           </article>{% endfor %}
         </div>
       </div>
     </section>
+    <section class="section section-muted" id="education">
+      <div class="container">
+        <p class="eyebrow">Academic journey</p>
+        <h2>Education</h2>
+        <div class="timeline mt-4">{% for item in portfolio.education %}<article class="education-item">
+            <div class="education-logo">{% if item.logo %}<img src="{{ url_for('static', filename=item.logo) }}"
+                alt="{{ item.institution }} logo">{% else %}<span>ED</span>{% endif %}</div>
+            <div>
+              <p class="timeline-date">{{ item.dates }}</p>
+              <h3>{{ item.institution }}</h3>
+              <p class="qualification">{{ item.qualification }}</p>
+              <p class="mb-0 text-secondary">{{ item.detail }}</p>
+              {% if item.modules %}<div class="module-list">
+                <p class="module-list-title">{{ item.module_year }}</p>
+                <div class="module-table" role="table" aria-label="{{ item.module_year }}">
+                  <div class="module-row module-row-header" role="row"><span role="columnheader">Module</span><span
+                      role="columnheader">Title</span><span role="columnheader">Level</span><span
+                      role="columnheader">Credits</span></div>{% for module in item.modules %}<div class="module-row"
+                    role="row"><span class="module-code" role="cell">{{ module.code }}</span><span role="cell">{{
+                      module.title }}</span><span role="cell">{{ module.level }}</span><span role="cell">{{
+                      module.credits }}</span></div>{% endfor %}
+                </div>
+              </div>{% endif %}
+            </div>
+          </article>{% endfor %}</div>
+      </div>
+    </section>
+    <section class="section" id="achievements">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-7">
+            <p class="eyebrow">Credentials</p>
+            <h2>Qualifications &amp; certificates</h2>
+            <div class="row g-3 mt-1">{% for certificate in portfolio.certificates %}<div class="col-md-6">
+                <article class="credential-card">
+                  <div class="credential-mark">✓</div>
+                  <p class="credential-date">{{ certificate.date }}</p>
+                  <h3>{{ certificate.title }}</h3>
+                  <p>{{ certificate.issuer }}</p>{% if certificate.description %}<p class="credential-description">{{
+                    certificate.description }}</p>{% endif %}{% if certificate.file %}<a
+                    href="{{ url_for('static', filename=certificate.file) }}" target="_blank" rel="noopener">View
+                    certificate ↗</a>{% else %}<span class="placeholder-label">File to be added</span>{% endif %}
+                </article>
+              </div>{% endfor %}</div>
+          </div>
+          <div class="col-lg-5">
+            <p class="eyebrow">Documents</p>
+            <h2 class="h3">Selected documents</h2>
+            <div class="document-list mt-4">{% for document in portfolio.documents %}{% if document.file %}<a
+                class="document-link" href="{{ url_for('static', filename=document.file) }}" target="_blank"
+                rel="noopener"><span>{{ document.title }}</span><span>↓</span></a>{% else %}<div
+                class="document-link is-pending"><span>{{ document.title }}</span><small>To be added</small></div>{%
+              endif %}{% endfor %}</div>
+            <p class="document-note mt-3">Only publish documents you are comfortable making public.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section-muted" id="projects">
+      <div class="container">
+        <p class="eyebrow">Practical work</p>
+        <h2>Projects &amp; experience</h2>
+        <div class="row g-4 mt-1">{% for project in portfolio.projects %}<div class="col-md-6">
+            <article class="project-card">
+              <h3>{{ project.title }}</h3>
+              <p>{{ project.description }}</p>
+              <div class="d-flex flex-wrap gap-2 mb-3">{% for tag in project.tags %}<span class="skill-tag">{{ tag
+                  }}</span>{% endfor %}</div>{% if project.link %}<a href="{{ project.link }}" target="_blank"
+                rel="noopener">View project ↗</a>{% else %}<span class="placeholder-label">Link to be added</span>{%
+              endif %}
+            </article>
+          </div>{% endfor %}</div>
+      </div>
+    </section>
+    <section class="section" id="interests">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-6">
+            <p class="eyebrow">What I am developing</p>
+            <h2>Skills</h2>
+            <div class="d-flex flex-wrap gap-2 mt-4">{% for skill in portfolio.skills %}<span
+                class="skill-tag skill-tag-large">{{ skill }}</span>{% endfor %}</div>
+          </div>
+          <div class="col-lg-6">
+            <p class="eyebrow">Beyond the classroom</p>
+            <h2>Fields of interest</h2>
+            <div class="d-flex flex-wrap gap-2 mt-4">{% for interest in portfolio.interests %}<span
+                class="skill-tag skill-tag-large">{{ interest }}</span>{% endfor %}</div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-
-  {% include 'footer.html' %}
-
+  <footer id="contact">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <p class="eyebrow text-white-50">Get in touch</p>
+          <h2>Let&apos;s connect.</h2>
+          <p class="mb-0">For an opportunity, collaboration, or conversation, I&apos;d be pleased to hear from you.</p>
+        </div>
+        <div class="col-lg-5 text-lg-end">
+          <div class="footer-contact"><a href="tel:{{ portfolio.phone|replace(' ', '') }}"><i class="bi bi-telephone"
+                aria-hidden="true"></i> {{ portfolio.phone }}</a><a href="mailto:{{ portfolio.email }}"><i
+                class="bi bi-envelope" aria-hidden="true"></i> {{ portfolio.email }}</a></div>
+          <div class="footer-links mt-3"></div>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 {{ portfolio.name }}. All rights reserved.</div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

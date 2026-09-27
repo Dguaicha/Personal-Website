@@ -201,6 +201,66 @@ PORTFOLIO = {
             ],
         },
     ],
+    "holistic_intro": "Outside technology and study, I value an active, grounded life shaped by health, faith, community, and continual personal growth.",
+    "holistic_groups": [
+        {
+            "title": "Active life",
+            "items": ["Tennis", "Staying fit and healthy", "Balanced nutrition"],
+        },
+        {
+            "title": "Faith and community",
+            "items": [
+                "Church and faith",
+                "Volunteering and service",
+                "Supporting people in need",
+            ],
+        },
+        {
+            "title": "Leisure and growth",
+            "items": [
+                "Family and friends",
+                "Travel and culture",
+                "Personal development",
+            ],
+        },
+    ],
+    "holistic_certificates": [
+        {
+            "title": "Student Council Service",
+            "issuer": "DUMMY: Add school or organisation name",
+            "date": "DUMMY: Add date or academic year",
+            "description": "Ongoing student leadership and community service, contributing to school life and initiatives that support others.",
+            "file": "assets/documents/certificates/studentcouncil.jpg",
+        },
+        {
+            "title": "SafeTALK Suicide Alertness Training",
+            "issuer": "DUMMY: Add training provider or organisation",
+            "date": "DUMMY: Add completion date",
+            "description": "Training in recognising signs of suicide risk, responding with care, and connecting people with appropriate support.",
+            "file": "assets/documents/certificates/safetalk.jpg",
+        },
+        {
+            "title": "Environmental Service: Galápagos Beach Clean-up",
+            "issuer": "DUMMY: Add organising organisation or community partner",
+            "date": "DUMMY: Add date or academic year",
+            "description": "Community service supporting environmental clean-up efforts and care for the coastal environment in the Galápagos.",
+            "file": "assets/documents/certificates/servicebeachcleaning.jpg",
+        },
+        {
+            "title": "Determination to Improve",
+            "issuer": "DUMMY: Add issuing school or organisation",
+            "date": "DUMMY: Add date or academic year",
+            "description": "Recognition of sustained effort, resilience, and a commitment to personal improvement.",
+            "file": "assets/documents/certificates/determinationtoimprove.jpg",
+        },
+        {
+            "title": "Tennis certificates",
+            "issuer": "DUMMY: Add club or organisation",
+            "date": "DUMMY: Add dates",
+            "description": "DUMMY: Add your tennis qualifications or achievements.",
+            "file": None,
+        },
+    ],
     "projects": [
         {
             "title": "Portfolio website",
@@ -260,43 +320,29 @@ PORTFOLIO = {
             "description": "A structured personal development award combining volunteering, physical activity, skills development, and an expedition.",
             "file": "assets/documents/certificates/2024 US Bronze certificate - VISUAL 1.pdf",
         },
-        {
-            "title": "Student Council Service",
-            "issuer": "DUMMY: Add school or organisation name",
-            "date": "DUMMY: Add date or academic year",
-            "description": "Ongoing student leadership and community service, contributing to school life and initiatives that support others.",
-            "file": "assets/documents/certificates/studentcouncil.jpg",
-        },
-        {
-            "title": "SafeTALK Suicide Alertness Training",
-            "issuer": "DUMMY: Add training provider or organisation",
-            "date": "DUMMY: Add completion date",
-            "description": "Training in recognising signs of suicide risk, responding with care, and connecting people with appropriate support.",
-            "file": "assets/documents/certificates/safetalk.jpg",
-        },
-        {
-            "title": "Environmental Service: Galápagos Beach Clean-up",
-            "issuer": "DUMMY: Add organising organisation or community partner",
-            "date": "DUMMY: Add date or academic year",
-            "description": "Community service supporting environmental clean-up efforts and care for the coastal environment in the Galápagos.",
-            "file": "assets/documents/certificates/servicebeachcleaning.jpg",
-        },
-        {
-            "title": "Determination to Improve",
-            "issuer": "DUMMY: Add issuing school or organisation",
-            "date": "DUMMY: Add date or academic year",
-            "description": "Recognition of sustained effort, resilience, and a commitment to personal improvement.",
-            "file": "assets/documents/certificates/determinationtoimprove.jpg",
-        },
     ],
-    "documents": [
-        {"title": "Curriculum vitae", "file": None},
-        {"title": "Academic transcript", "file": None},
+    "document_groups": [
         {
-            "title": "Letter of Recommendation — Mathematics & Computer Science",
-            "file": "assets/documents/references/Recomendation letter 1_Alejandro Guaicha.pdf",
+            "title": "CV / Resume",
+            "items": [{"title": "Curriculum vitae", "file": None}],
         },
-        {"title": "References and letters of recommendation", "file": None},
+        {
+            "title": "Transcripts",
+            "items": [{"title": "Academic transcript", "file": None}],
+        },
+        {
+            "title": "References",
+            "items": [
+                {
+                    "title": "Letter of Recommendation — Mathematics & Computer Science",
+                    "file": "assets/documents/references/Recomendation letter 1_Alejandro Guaicha.pdf",
+                },
+                {
+                    "title": "Additional references and letters of recommendation",
+                    "file": None,
+                },
+            ],
+        },
     ],
     "links": {
         "linkedin": "https://www.linkedin.com/in/david-villagómez-439066305",

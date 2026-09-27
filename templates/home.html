@@ -129,11 +129,15 @@
           <div class="col-lg-5">
             <p class="eyebrow">Documents</p>
             <h2 class="h3">Selected documents</h2>
-            <div class="document-list mt-4">{% for document in portfolio.documents %}{% if document.file %}<a
-                class="document-link" href="{{ url_for('static', filename=document.file) }}" target="_blank"
-                rel="noopener"><span>{{ document.title }}</span><span>↓</span></a>{% else %}<div
-                class="document-link is-pending"><span>{{ document.title }}</span><small>To be added</small></div>{%
-              endif %}{% endfor %}</div>
+            <div class="document-groups mt-4">{% for group in portfolio.document_groups %}<details
+                class="document-group">
+                <summary>{{ group.title }}</summary>
+                <div class="document-list">{% for document in group["items"] %}{% if document.file %}<a
+                    class="document-link" href="{{ url_for('static', filename=document.file) }}" target="_blank"
+                    rel="noopener"><span>{{ document.title }}</span><span>↓</span></a>{% else %}<div
+                    class="document-link is-pending"><span>{{ document.title }}</span><small>To be added</small></div>{%
+                  endif %}{% endfor %}</div>
+              </details>{% endfor %}</div>
             <p class="document-note mt-3">Only publish documents you are comfortable making public.</p>
           </div>
         </div>
@@ -176,6 +180,30 @@
                 class="skill-tag skill-tag-large">{{ interest }}</span>{% endfor %}</div>
           </div>
         </div>
+      </div>
+    </section>
+    <section class="section section-muted" id="life">
+      <div class="container">
+        <p class="eyebrow">Life beyond technology</p>
+        <h2>Health, community &amp; leisure</h2>
+        <p class="section-copy holistic-intro">{{ portfolio.holistic_intro }}</p>
+        <div class="holistic-grid mt-4">{% for group in portfolio.holistic_groups %}<div class="holistic-group">
+            <h3>{{ group.title }}</h3>
+            <div class="d-flex flex-wrap gap-2">{% for item in group["items"] %}<span
+                class="skill-tag skill-tag-large">{{ item }}</span>{% endfor %}</div>
+          </div>{% endfor %}</div>
+        <details class="document-group holistic-evidence mt-4">
+          <summary>Certificates</summary>
+          <div class="holistic-certificate-list">{% for certificate in portfolio.holistic_certificates %}<div
+              class="holistic-certificate-item">
+              <div><strong>{{ certificate.title }}</strong><small>{{ certificate.date }} · {{ certificate.issuer
+                  }}</small>
+                <p>{{ certificate.description }}</p>
+              </div>{% if certificate.file %}<a href="{{ url_for('static', filename=certificate.file) }}"
+                target="_blank" rel="noopener">View evidence ↗</a>{% else %}<span class="placeholder-label">To be
+                added</span>{% endif %}
+            </div>{% endfor %}</div>
+        </details>
       </div>
     </section>
   </main>

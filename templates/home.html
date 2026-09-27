@@ -149,7 +149,8 @@
               <p>{{ project.description }}</p>
               <div class="d-flex flex-wrap gap-2 mb-3">{% for tag in project.tags %}<span class="skill-tag">{{ tag
                   }}</span>{% endfor %}</div>{% if project.link %}<a href="{{ project.link }}" target="_blank"
-                rel="noopener">View project ↗</a>{% else %}<span class="placeholder-label">Link to be added</span>{%
+                rel="noopener">Link to repository ↗</a>{% else %}<span class="placeholder-label">Link to be
+                added</span>{%
               endif %}
             </article>
           </div>{% endfor %}</div>
@@ -161,8 +162,12 @@
           <div class="col-lg-6">
             <p class="eyebrow">What I am developing</p>
             <h2>Skills</h2>
-            <div class="d-flex flex-wrap gap-2 mt-4">{% for skill in portfolio.skills %}<span
-                class="skill-tag skill-tag-large">{{ skill }}</span>{% endfor %}</div>
+            <div class="skill-groups mt-4">{% for group in portfolio.skill_groups %}<div class="skill-group">
+                <p class="skill-group-title">{{ group.label }}</p>
+                <div class="d-flex flex-wrap gap-2">{% for skill in
+                  group["items"] %}<span class="skill-tag skill-tag-large">{{ skill }}</span>{% endfor %}</div>
+              </div>{%
+              endfor %}</div>
           </div>
           <div class="col-lg-6">
             <p class="eyebrow">Beyond the classroom</p>

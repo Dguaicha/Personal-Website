@@ -278,6 +278,18 @@ PORTFOLIO = {
             "link": "https://github.com/Dguaicha/Personal-Website",
         },
         {
+            "title": "LeetCode Solutions",
+            "description": "A growing collection of solutions for algorithmic and data-structure problems, documenting practice in computational thinking, problem solving, and implementation.",
+            "tags": [
+                "Python",
+                "Algorithms",
+                "Data structures",
+                "Problem solving",
+                "GitHub",
+            ],
+            "link": "https://github.com/Dguaicha/LeetCode-Solutions",
+        },
+        {
             "title": "Next project",
             "description": "Replace this placeholder with a project, contribution, competition, or independent study.",
             "tags": ["Coming soon"],
